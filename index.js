@@ -3,6 +3,17 @@ var minutes = 0;
 var hours = 0;
 
 function run() {
+    async function getScreenLock() {
+        if(isScreenLockSupported()){
+          let screenLock;
+          try {
+             screenLock = await navigator.wakeLock.request('screen');
+          } catch(err) {
+             console.log(err.name, err.message);
+          }
+          return screenLock;
+        }
+    }
     document.body.style.cursor = "none";
     setInterval(function () {
         if (seconds == 0) {
@@ -30,4 +41,4 @@ window.onload = function() {
         minutes = 60 - d.getMinutes() - 1;
         run();
     }, 1);
-  };
+};
