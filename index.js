@@ -1,5 +1,3 @@
-var noSleep = new NoSleep();
-
 var seconds = 0;
 var minutes = 0;
 var hours = 0;
@@ -18,7 +16,6 @@ function run() {
 }
 
 window.onload = function() {
-    enableNoSleep();
     getTime = setInterval(function () {
         const d = new Date();
         seconds = 60 - d.getSeconds();
@@ -32,7 +29,3 @@ window.onload = function() {
         run();
     }, 1);
 };
-
-function enableNoSleep() {
-  noSleep.enable();
-}
