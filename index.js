@@ -19,12 +19,17 @@ window.onload = function() {
     getTime = setInterval(function () {
         const d = new Date();
         seconds = 60 - d.getSeconds();
-        minutes = 60 - d.getMinutes() - 1;
         if (seconds == 60) {
             seconds = 0;
+            minutes = minutes = 60 - d.getMinutes();
+        } else {
+            minutes = 60 - d.getMinutes() - 1;
         }
         if (minutes == 60) {
             minutes = 0;
+        }
+        if (seconds == 0 && minutes == 0) {
+            hours = 1;
         }
         run();
     }, 1);
