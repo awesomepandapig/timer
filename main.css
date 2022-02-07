@@ -1,0 +1,35 @@
+body {
+    background-color: #000000;
+    font-family: monospace;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+  }
+
+#container {
+    color: red;
+    border-radius: 5px;
+    font-size: 13vw;
+}
+
+img {
+  width: 260px;
+}
