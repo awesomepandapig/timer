@@ -28,9 +28,6 @@ window.onload = function() {
         if (minutes == 60) {
             minutes = 0;
         }
-        if (seconds == 0 && minutes == 0) {
-            hours = 1;
-        }
         run();
     }, 1);
 };
